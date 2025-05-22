@@ -21,13 +21,22 @@
 }
 
 .button.secondary {
-  background-color: #1d1d1d;
-  color: white;
+  background-color: white;
+  color: #0c70f2;
 }
 
 .button.secondary:hover {
   background-color: #4d4d4d;
   color: white;
+}
+
+.button.default {
+  background-color: #1d1d1d;
+  color: white;
+}
+
+.button.default:hover {
+  background-color: #0c70f2;
 }
 
 .button:disabled,

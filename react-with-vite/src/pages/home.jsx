@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Button buttonStyle="secondary" arrow>
+      <Button buttonStyle="default" arrow>
         Ola!
       </Button>
       <Footer />

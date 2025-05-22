@@ -1,10 +1,13 @@
 import "./Banner.css";
+
 function Banner(props) {
   return (
     <>
       <div id="banner" style={{ backgroundImage: `url(/${props.image})` }}>
         <div className="container">
-          <h1>{props.Title}</h1>
+          <div className="titlebanner">
+            <h1>{props.title}</h1>
+          </div>
         </div>
       </div>
     </>

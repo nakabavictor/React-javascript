@@ -19,3 +19,25 @@ body {
 a {
   text-decoration: none;
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.al-start {
+  align-items: center;
+}
+
+.al-center {
+  align-items: center;
+}
+
+.jc-center {
+  justify-content: center;
+}

@@ -1,0 +1,24 @@
+.sobre {
+  height: 400px;
+}
+
+.sobreContainer {
+  flex-direction: row;
+  gap: 50px;
+}
+
+.destaque {
+  width: 448px;
+  margin: 0;
+  padding: 0;
+}
+.destaque h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.paragrafos {
+  width: 655px;
+  flex-direction: column;
+  gap: 20px;
+}

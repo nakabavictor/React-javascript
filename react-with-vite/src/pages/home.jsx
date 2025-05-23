@@ -10,7 +10,7 @@ function Home() {
     <>
       <body>
         <Header />
-        <div className="container">
+        <div className="container al-center">
           <Hero />
           <ProjectsList />
         </div>

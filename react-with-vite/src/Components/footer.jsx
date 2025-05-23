@@ -49,7 +49,7 @@ function Footer() {
             </ul>
           </nav>
         </div>
-        <div id="contact">
+        <div id="contato">
           <h3>Contact</h3>
           <p>Rua Japao, 11 - Britania | Belo Horizonte - MG | CEP 31011575</p>
           <p>LelouchLamp@gmail.com</p>

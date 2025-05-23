@@ -1,7 +1,7 @@
-import Header from "../Components/Header";
-import ProjectsList from "../Components/ProjectsList";
-import Footer from "../Components/Footer";
-import Banner from "../Components/Banner";
+import Header from "../Components/Header/Header";
+import ProjectsList from "../Components/ProjectsList/ProjectsList";
+import Footer from "../Components/Footer/footer";
+import Banner from "../Components/Banner/Banner";
 
 function Project() {
   return (

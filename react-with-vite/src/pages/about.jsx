@@ -1,6 +1,6 @@
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import Banner from "../Components/Banner";
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/footer";
+import Banner from "../Components/Banner/Banner";
 import Sobre from "../Components/Sobre/Sobre";
 
 function About() {

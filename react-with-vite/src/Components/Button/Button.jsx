@@ -1,5 +1,5 @@
 import "./Button.css";
-import Seta from "../assets/Vector.svg";
+import Seta from "../../assets/Vector.svg";
 
 function Button({ arrow, buttonStyle, children, ...props }) {
   return (

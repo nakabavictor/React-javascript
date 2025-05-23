@@ -1,9 +1,9 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import Linkedinicon from "../assets/linkedinicon.svg";
-import Instagramicon from "../assets/intsgramicon.svg";
-import FacebookIcon from "../assets/facebookicon.svg";
-import Xicon from "../assets/X_icon.svg.png";
+import Linkedinicon from "../../assets/linkedinicon.svg";
+import Instagramicon from "../../assets/intsgramicon.svg";
+import FacebookIcon from "../../assets/facebookicon.svg";
+import Xicon from "../../assets/X_icon.svg.png";
 
 function Footer() {
   return (

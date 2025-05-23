@@ -1,5 +1,5 @@
 import "./ProjectsList.css";
-import Like from "../assets/like.png";
+import Like from "../../assets/like.png";
 
 function ProjectsList() {
   return (

@@ -1,17 +1,23 @@
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Button from "../Components/Button";
-import Banner from "../Components/Banner";
+import Hero from "../Components/Hero";
+import ProjectsList from "../Components/ProjectsList";
+
+import "./home.css";
 
 function Home() {
   return (
     <>
-      <Header />
-      <Button buttonStyle="default" arrow>
-        Ola!
-      </Button>
-      <Banner title="Home" />
-      <Footer />
+      <body>
+        <Header />
+        <div className="hero">
+          <Hero />
+        </div>
+        <div className="List">
+          <ProjectsList />
+        </div>
+        <Footer />
+      </body>
     </>
   );
 }

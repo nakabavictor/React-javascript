@@ -1,11 +1,12 @@
 footer {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 #frase {
+  display: flex;
   width: 30%;
 }
 
@@ -32,4 +33,35 @@ footer {
 .socialmedia img {
   width: 18px;
   height: 18px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  #frase,
+  #contact,
+  #pages {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #contact {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 512px) {
+
+}
+
+@media (max-width: 480px) {
+  .footer h4 {
+    font-size: 16px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 13px;
+  }
 }

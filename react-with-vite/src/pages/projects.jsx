@@ -7,7 +7,7 @@ function Project() {
   return (
     <>
       <Header />
-      <Banner title="Projetos" />
+      <Banner title="Projetos" image="projects-baner.png" />
       <ProjectsList />
       <Footer />
     </>

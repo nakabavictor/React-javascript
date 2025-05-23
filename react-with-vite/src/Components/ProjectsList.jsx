@@ -4,7 +4,7 @@ import Like from "../assets/like.png";
 function ProjectsList() {
   return (
     <>
-      <div className="container">
+      <div className="container al-center">
         <div className="texts">
           <h1>Follow Our Projects</h1>
           <p>

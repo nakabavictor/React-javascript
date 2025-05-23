@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <Header />
-      <Banner title="Sobre" />
+      <Banner title="Sobre" image="about-baner.jpg" />
       <Sobre />
       <Footer />
     </>

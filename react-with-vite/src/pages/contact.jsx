@@ -7,7 +7,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <Banner image="../assets/about-baner.jpg" title="Contact Us" />
+      <Banner image="contact-baner.png" title="Contact Us" />
       <ContactForm />
       <Footer />
     </>

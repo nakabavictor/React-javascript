@@ -1,7 +1,45 @@
 form {
-  height: 629px;
+  margin-top: 50px;
+  height: 540px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+  font-family: "Jost";
+  font-weight: 400;
+}
+
+.nomeemail {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.formcontainer {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-nameandemail input {
+  width: 278px;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.form-text {
+  width: 100%;
+}
+
+.form-text textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: "Jost";
+  font-weight: 400;
 }

@@ -10,10 +10,8 @@ function Home() {
     <>
       <body>
         <Header />
-        <div className="hero">
+        <div className="container">
           <Hero />
-        </div>
-        <div className="List">
           <ProjectsList />
         </div>
         <Footer />

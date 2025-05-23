@@ -4,9 +4,10 @@
   column-gap: 10px;
   cursor: pointer;
   display: flex;
+  justify-content: center;
   font-size: 18px;
-  font-weight: 600;
-  padding: 25px 50px;
+  font-weight: 300;
+  padding: 15px 30px;
   transition: background-color 0.3s ease;
 }
 
@@ -14,6 +15,7 @@
   background-color: #0c70f2;
   font-family: "Jost";
   color: white;
+  width: 224px;
 }
 
 .button.primary:hover {
@@ -30,7 +32,17 @@
   color: white;
 }
 
+.button.large {
+  background-color: #1d1d1d;
+  color: white;
+}
+
+.button.large:hover {
+  background-color: #0c70f2;
+}
+
 .button.default {
+  width: fit-content;
   background-color: #1d1d1d;
   color: white;
 }

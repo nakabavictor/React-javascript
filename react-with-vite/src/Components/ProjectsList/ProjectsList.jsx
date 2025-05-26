@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
 import "./ProjectsList.css";
 import Like from "../../assets/like.png";
 
+import { getAAPI } from "../../Services/apiServices";
+
 function ProjectsList() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const projectsResponse = await getAAPI("projects");
+        setProjects(projectsResponse);
+      } catch {
+        setProjects([]);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="container al-center">
@@ -13,54 +30,23 @@ function ProjectsList() {
           </p>
         </div>
         <div className="grid-container">
-          <div className="card">
-            <div className="thumb"></div>
-            <h3>Joao Vitor</h3>
-            <p>BH, Brazil</p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
-          <div className="card">
-            <div className="thumb"></div>
-            <h3></h3>
-            <p></p>
-            <img src={Like} />
-          </div>
+          {projects.length > 0 ? (
+            projects.map((project) => (
+              <div key={project.id} className="card">
+                <div
+                  className="thumb"
+                  style={{
+                    backgroundImage: `url(${project.thumb})`,
+                  }}
+                ></div>
+                <h3>{project.title}</h3>
+                <p>{project.subtitle}</p>
+                <img src={Like} alt="Like icon" />
+              </div>
+            ))
+          ) : (
+            <p>Carregando projetos...</p>
+          )}
         </div>
       </div>
     </>

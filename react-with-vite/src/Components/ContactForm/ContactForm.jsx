@@ -26,7 +26,9 @@ function ContactForm() {
               required
             />
           </div>
-          <Button buttonStyle="default">Enviar Agora</Button>
+          <Button type="submit" buttonStyle="default">
+            Enviar Agora
+          </Button>
         </div>
       </form>
     </>

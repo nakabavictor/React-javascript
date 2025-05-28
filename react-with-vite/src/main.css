@@ -41,3 +41,7 @@ a {
 .jc-center {
   justify-content: center;
 }
+
+.jc-space-between {
+  justify-content: space-between;
+}

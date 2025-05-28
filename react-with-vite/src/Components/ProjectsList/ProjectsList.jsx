@@ -47,7 +47,7 @@ function ProjectsList() {
                 ></div>
                 <h3>{project.title}</h3>
                 <p>{project.subtitle}</p>
-                <img onClick={LikeOrLiked} src={Like} alt="Like icon" />
+                <img onClick={LikeOrLiked} src={`${isLiked ? `${Liked}` : `${Like}`}`} alt="Like icon" />
               </div>
             ))
           ) : (

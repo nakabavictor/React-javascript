@@ -67,7 +67,7 @@ function ProjectsList() {
                 <img
                   onClick={() => handleSavedProjects(project.id)}
                   alt="Like icon"
-                  src={faveProjects.includes(project.id) ? Like : Liked}
+                  src={faveProjects.includes(project.id) ? Liked : Like}
                 />
               </div>
             ))

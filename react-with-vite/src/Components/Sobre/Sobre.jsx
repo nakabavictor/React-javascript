@@ -8,7 +8,7 @@ function Sobre() {
   return (
     <>
       <div className="sobre container al-center jc-center">
-        <div className="sobreContainer d-flex jc-center">
+        <div className="sobreContainer d-flex jc-center al-center">
           <div className="destaque d-flex">
             <h1>{appContext.languages[appContext.language].about.title}</h1>
           </div>

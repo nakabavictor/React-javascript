@@ -56,7 +56,7 @@ function Footer() {
             </nav>
           </div>
           <div id="contato">
-            <h3>Contact</h3>
+            <h3>{appContext.languages[appContext.language].menu.contact}</h3>
             <p>Rua Japao, 11 - Britania | Belo Horizonte - MG | CEP 31011575</p>
             <p>LelouchLamp@gmail.com</p>
             <p>31 928284673</p>

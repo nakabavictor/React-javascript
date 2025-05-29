@@ -9,6 +9,9 @@ form {
   font-family: "Jost";
   font-weight: 400;
 }
+form h1 {
+  padding: 15px;
+}
 
 .nomeemail {
   display: flex;
@@ -43,4 +46,17 @@ form {
   border-bottom: 1px solid #000000;
   font-family: "Jost";
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  form {
+    height: fit-content;
+  }
+  .form-nameandemail {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .form-nameandemail input {
+    width: 150px;
+  }
 }

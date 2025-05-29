@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./ProjectsList.css";
 import Like from "../../assets/like.png";
 import Liked from "../../assets/liked.png";
 
 import { getAAPI } from "../../Services/apiServices";
+import { AppContext } from "../../context/AppContext";
 
 function ProjectsList() {
   const [projects, setProjects] = useState([]);
@@ -25,15 +26,14 @@ function ProjectsList() {
     setLike(!isLiked);
   };
 
+  const appContext = useContext(AppContext);
+
   return (
     <>
       <div className="container al-center">
         <div className="texts">
-          <h1>Follow Our Projects</h1>
-          <p>
-            It is a long established fact that a reader will be distracted by the of readable content of page lookings
-            at its layouts points.
-          </p>
+          <h1>{appContext.languages[appContext.language].projects.title}</h1>
+          <p>{appContext.languages[appContext.language].projects.subtitle}</p>
         </div>
         <div className="grid-container">
           {projects.length > 0 ? (

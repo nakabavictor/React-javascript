@@ -1,6 +1,6 @@
 import Header from "../Components/Header/Header";
 import ProjectsList from "../Components/ProjectsList/ProjectsList";
-import Footer from "../Components/Footer/footer";
+import Footer from "../Components/Footer/Footer";
 import Banner from "../Components/Banner/Banner";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";

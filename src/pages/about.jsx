@@ -1,5 +1,5 @@
 import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/footer";
+import Footer from "../Components/Footer/Footer";
 import Banner from "../Components/Banner/Banner";
 import Sobre from "../Components/Sobre/Sobre";
 import { useContext } from "react";

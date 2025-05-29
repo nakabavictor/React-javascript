@@ -8,7 +8,7 @@ import { AppContext } from "../../context/AppContext";
 
 function ProjectsList() {
   const [projects, setProjects] = useState([]);
-  const [isLiked, setLike] = useState(false);
+  const [faveProjects, setFaveProjects] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,9 +22,26 @@ function ProjectsList() {
     fetchData();
   }, []);
 
-  const LikeOrLiked = () => {
-    setLike(!isLiked);
+  const handleSavedProjects = (id) => {
+    setFaveProjects((prevFaveProjects) => {
+      if (prevFaveProjects.includes(id)) {
+        const filteredArray = prevFaveProjects.filter((projectId) => projectId !== id);
+        sessionStorage.setItem("faveProjects", JSON.stringify(filteredArray));
+        return filteredArray;
+      } else {
+        const newFaveProjects = [...prevFaveProjects, id];
+        sessionStorage.setItem("faveProjects", JSON.stringify(newFaveProjects));
+        return newFaveProjects;
+      }
+    });
   };
+
+  useEffect(() => {
+    const savedProjects = JSON.parse(sessionStorage.getItem("faveProjects"));
+    if (savedProjects) {
+      setFaveProjects(savedProjects);
+    }
+  }, []);
 
   const appContext = useContext(AppContext);
 
@@ -47,7 +64,11 @@ function ProjectsList() {
                 ></div>
                 <h3>{project.title}</h3>
                 <p>{project.subtitle}</p>
-                <img onClick={LikeOrLiked} src={`${isLiked ? `${Liked}` : `${Like}`}`} alt="Like icon" />
+                <img
+                  onClick={() => handleSavedProjects(project.id)}
+                  alt="Like icon"
+                  src={faveProjects.includes(project.id) ? Like : Liked}
+                />
               </div>
             ))
           ) : (

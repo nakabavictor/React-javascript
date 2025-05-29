@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./ContactForm.css";
 import Button from "../Button/Button";
+import { AppContext } from "../../context/AppContext";
 
 function ContactForm() {
+  const appContext = useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +29,7 @@ function ContactForm() {
         if (response.ok) {
           setFormSubmitted(true);
         } else {
-          alert("Erro ao enviar");
+          alert(`${appContext.languages[appContext.language].contact.pl1}`);
         }
       } catch (e) {
         alert("Erro: ", e);
@@ -62,14 +64,27 @@ function ContactForm() {
   return (
     <>
       <form onSubmit={handlesubmit}>
-        <h1>Nós amamamos encontrar novas pessoas e ajudá-las</h1>
+        <h1>{appContext.languages[appContext.language].contact.title}</h1>
         <div className="formcontainer">
           <div className="nomeemail">
             <div className="form-nameandemail">
-              <input type="text" name="name" id="name" placeholder="Nome *" onChange={handleChange} />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder={appContext.languages[appContext.language].contact.pl1}
+                required={appContext.languages[appContext.language].general.required}
+                onChange={handleChange}
+              />
             </div>
             <div className="form-nameandemail">
-              <input type="email" name="email" id="email" placeholder="Email *" onChange={handleChange} />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder={appContext.languages[appContext.language].contact.pl2}
+                onChange={handleChange}
+              />
             </div>
           </div>
 
@@ -79,14 +94,14 @@ function ContactForm() {
               id="message"
               rows="4"
               cols="50"
-              placeholder="Olá, estou interessado em..."
+              placeholder={appContext.languages[appContext.language].contact.pl3}
               onChange={handleChange}
             />
           </div>
-          <div className="d-flex al-center jc-space-between" style={{ width: "300px" }}>
-            {formSubmitted && <p>Sucesso ao enviar</p>}
+          <div className="d-flex al-center jc-center" style={{ width: "300px" }}>
+            {formSubmitted && <p>{appContext.languages[appContext.language].contact.successMsg}</p>}
             <Button type="submit" buttonStyle="default" disabled={!isValidForm || formSubmitLoading}>
-              Enviar Agora
+              {appContext.languages[appContext.language].general.send}
             </Button>
           </div>
         </div>

@@ -3,30 +3,32 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 20px;
   height: 400px;
-  width: 60%;
+  width: 100%;
   padding: 50px;
   margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: 55px;
-  color: #000000;
-}
-
 .hero-text {
+  flex-direction: column;
   width: 40%;
+  text-align: start;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 569px) and (max-width: 768px) {
   .hero-text {
     width: 100%;
   }
 }
 
 @media (max-width: 568px) {
+  .hero-text {
+    width: 100%;
+  }
   .hero h1 {
     font-size: 50px;
   }

@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/react.svg";
 import Button from "../Button/Button";
 import "./Header.css";
+import { AppContext } from "../../context/AppContext";
 
 function Header() {
   const [isOpen, SetIsOpen] = useState(false);
   const toggleMenu = () => {
     SetIsOpen(!isOpen);
   };
+
+  const appContext = useContext(AppContext);
+
   return (
     <>
       <header>
@@ -26,16 +30,16 @@ function Header() {
           </Button>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">{appContext.languages[appContext.language].menu.home}</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">{appContext.languages[appContext.language].menu.about}</Link>
             </li>
             <li>
-              <Link to="/projects">projects</Link>
+              <Link to="/projects">{appContext.languages[appContext.language].menu.projects}</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">{appContext.languages[appContext.language].menu.contact}</Link>
             </li>
           </ul>
         </nav>

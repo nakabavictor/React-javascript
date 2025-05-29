@@ -1,17 +1,17 @@
-.sobre {
-  height: 400px;
-}
-
 .sobreContainer {
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 50px;
 }
 
 .destaque {
+  display: flex;
+  flex-wrap: wrap;
   width: 448px;
   margin: 0;
   padding: 0;
 }
+
 .destaque h1 {
   padding: 0;
   margin: 0;
@@ -20,5 +20,16 @@
 .paragrafos {
   width: 655px;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .destaque {
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+  .paragrafos {
+    width: fit-content;
+  }
 }

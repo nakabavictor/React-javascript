@@ -1,8 +1,24 @@
-footer {
+.cima {
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.baixo {
+  width: 100%;
+  justify-content: end;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+.imgs {
+  display: flex;
+  gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
 }
 
 #frase {
@@ -17,6 +33,7 @@ footer {
 }
 
 #pages {
+  width: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -35,15 +52,14 @@ footer {
   height: 18px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
   footer {
     flex-direction: column;
     padding: 0;
     align-items: center;
   }
   #frase,
-  #contact,
-  #pages {
+  #contact {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -51,12 +67,30 @@ footer {
   #contact {
     margin-bottom: 30px;
   }
+  #pages {
+    display: none;
+  }
 }
-@media (max-width: 512px) {
 
-}
-
-@media (max-width: 480px) {
+@media (max-width: 499px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  .cima {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+  #pages {
+    justify-content: center;
+    display: none;
+  }
+  #frase {
+    width: 100%;
+  }
   .footer h4 {
     font-size: 16px;
   }

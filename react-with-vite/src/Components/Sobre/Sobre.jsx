@@ -4,8 +4,8 @@ function Sobre() {
   return (
     <>
       <div className="sobre container al-center jc-center">
-        <div className="sobreContainer d-flex">
-          <div className="destaque">
+        <div className="sobreContainer d-flex jc-center">
+          <div className="destaque d-flex">
             <h1>We set the trends of modern living Services</h1>
           </div>
 

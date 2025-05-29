@@ -1,6 +1,6 @@
 import Header from "../Components/Header/Header";
 import ProjectsList from "../Components/ProjectsList/ProjectsList";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../Components/Footer/footer";
 import Hero from "../Components/Hero/Hero";
 
 function Home() {

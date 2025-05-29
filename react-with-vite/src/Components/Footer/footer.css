@@ -1,8 +1,22 @@
-footer {
+.cima {
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.baixo {
+  width: 100%;
+  justify-content: end;
+}
+
+.imgs {
+  display: flex;
+  gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
 }
 
 #frase {
@@ -53,7 +67,6 @@ footer {
   }
 }
 @media (max-width: 512px) {
-
 }
 
 @media (max-width: 480px) {

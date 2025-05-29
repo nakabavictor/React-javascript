@@ -1,0 +1,101 @@
+.cima {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.baixo {
+  width: 100%;
+  justify-content: end;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+.imgs {
+  display: flex;
+  gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+#frase {
+  display: flex;
+  width: 30%;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#pages {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#pages nav ul,
+#contact {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialmedia img {
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  #frase,
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #contact {
+    margin-bottom: 30px;
+  }
+  #pages {
+    display: none;
+  }
+}
+
+@media (max-width: 499px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  .cima {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+  #pages {
+    justify-content: center;
+    display: none;
+  }
+  #frase {
+    width: 100%;
+  }
+  .footer h4 {
+    font-size: 16px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 13px;
+  }
+}

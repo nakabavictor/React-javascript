@@ -3,10 +3,10 @@ import ProjectsList from "../Components/ProjectsList/ProjectsList";
 import Footer from "../Components/Footer/footer";
 import Banner from "../Components/Banner/Banner";
 import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../Context/AppContext";
 
 function Project() {
-  const appContext = useContext(AppContext)
+  const appContext = useContext(AppContext);
   return (
     <>
       <Header />

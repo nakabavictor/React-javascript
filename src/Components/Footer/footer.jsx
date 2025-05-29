@@ -7,7 +7,7 @@ import Xicon from "../../assets/X_icon.svg.png";
 import Brasil from "../../assets/brazil_9906449 2.svg";
 import USA from "../../assets/usa_4628635 2.svg";
 import "./Footer.css";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 function Footer() {
   const appContext = useContext(AppContext);
 

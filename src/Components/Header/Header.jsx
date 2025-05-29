@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/react.svg";
 import Button from "../Button/Button";
 import "./Header.css";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 function Header() {
   const [isOpen, SetIsOpen] = useState(false);

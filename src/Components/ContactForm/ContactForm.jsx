@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import "./ContactForm.css";
 import Button from "../Button/Button";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 function ContactForm() {
   const appContext = useContext(AppContext);

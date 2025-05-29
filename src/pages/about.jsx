@@ -3,7 +3,7 @@ import Footer from "../Components/Footer/footer";
 import Banner from "../Components/Banner/Banner";
 import Sobre from "../Components/Sobre/Sobre";
 import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../Context/AppContext";
 
 function About() {
   const appContext = useContext(AppContext);

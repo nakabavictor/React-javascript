@@ -5,7 +5,7 @@ import Project from "./pages/projects";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import ScrollTop from "./utils/Scrollup";
-import { AppContext } from "./context/AppContext";
+import { AppContext } from "./Context/AppContext";
 
 function App() {
   const appContext = useContext(AppContext);

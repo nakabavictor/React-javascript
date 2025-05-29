@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Hero.css";
 import Button from "../Button/Button";
 import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 function Hero() {
   const appContext = useContext(AppContext);

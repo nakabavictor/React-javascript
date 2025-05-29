@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Sobre.css";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 function Sobre() {
   const appContext = useContext(AppContext);

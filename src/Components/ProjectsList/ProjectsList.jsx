@@ -4,7 +4,7 @@ import Like from "../../assets/like.png";
 import Liked from "../../assets/liked.png";
 
 import { getAAPI } from "../../Services/apiServices";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 function ProjectsList() {
   const [projects, setProjects] = useState([]);

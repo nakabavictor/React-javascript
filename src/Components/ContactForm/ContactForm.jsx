@@ -19,7 +19,7 @@ function ContactForm() {
     if (isValidForm) {
       setFormSubmitLoading(true);
       try {
-        const response = await fetch(`https://formsubmit.co/ajax/SEU_EMAIL_AQUI`, {
+        const response = await fetch(`https://formsubmit.co/ajax/victornakaba@gmail.com`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

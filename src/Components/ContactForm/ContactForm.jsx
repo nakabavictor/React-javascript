@@ -28,6 +28,7 @@ function ContactForm() {
         });
         if (response.ok) {
           setFormSubmitted(true);
+          console.log("foi");
         } else {
           alert(`${appContext.languages[appContext.language].contact.pl1}`);
         }
@@ -67,6 +68,7 @@ function ContactForm() {
         <h1>{appContext.languages[appContext.language].contact.title}</h1>
         <div className="formcontainer">
           <div className="nomeemail">
+            <input type="hidden" name="access_key" value="6b3efbeb-7416-48fc-bffe-95d9383e6c2a"></input>
             <div className="form-nameandemail">
               <input
                 type="text"

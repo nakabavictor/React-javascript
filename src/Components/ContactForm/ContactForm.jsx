@@ -30,7 +30,7 @@ function ContactForm() {
           setFormSubmitted(true);
           console.log("foi");
         } else {
-          alert(`${appContext.languages[appContext.language].contact.pl1}`);
+          alert(`${appContext.languages[appContext.language].general.error}`);
         }
       } catch (e) {
         alert("Erro: ", e);

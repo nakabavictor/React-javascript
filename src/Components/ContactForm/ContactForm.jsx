@@ -19,26 +19,31 @@ function ContactForm() {
     if (isValidForm) {
       setFormSubmitLoading(true);
       try {
-        const response = await fetch(`https://api.web3forms.com/submit`, {
+        const response = await fetch(`https://formsubmit.co/ajax/SEU_EMAIL_AQUI`, {
           method: "POST",
           headers: {
-            "Content-type": "application/json",
+            "Content-Type": "application/json",
+            Accept: "application/json",
           },
-          body: JSON.stringify({ ...formData, access_key: "6b3efbeb-7416-48fc-bffe-95d9383e6c2a" }),
+
+          body: JSON.stringify(formData),
         });
+
         if (response.ok) {
           setFormSubmitted(true);
-          console.log("foi");
         } else {
-          alert(`${appContext.languages[appContext.language].general.error}`);
+          const data = await response.json();
+          alert(`${appContext.language[appContext.languages].general.error}`);
+          console.error("Erro FormSubmit:", data);
         }
-      } catch (e) {
-        alert("Erro: ", e);
+      } catch (error) {
+        alert(`Erro ao conectar com o servidor: ${error}`);
+        console.error("Erro Fetch:", error);
       } finally {
         setFormSubmitLoading(false);
       }
     } else {
-      console.log("Invalid");
+      console.log("Formulário inválido");
     }
   };
 

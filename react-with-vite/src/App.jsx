@@ -9,6 +9,8 @@ import { AppContext } from "./context/AppContext";
 
 function App() {
   const appContext = useContext(AppContext);
+  const { backgroundColor /*, outros valores do contexto */ } = useContext(AppContext);
+  // 1. Adicionar estado para a cor de fundo
 
   if (appContext.loading) {
     return "Loading...";
@@ -16,13 +18,15 @@ function App() {
 
   return (
     <Router>
-      <ScrollTop />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/projects" element={<Project />}></Route>
-      </Routes>
+      <div className="App" style={{ backgroundColor: backgroundColor}} >
+        <ScrollTop />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/projects" element={<Project />}></Route>
+        </Routes>
+      </div>
     </Router>
   );
 }

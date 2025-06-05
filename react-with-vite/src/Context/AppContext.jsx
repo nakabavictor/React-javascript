@@ -9,15 +9,14 @@ export const AppProvider = ({ children }) => {
   const [language, setLanguage] = useState(savedLanguge ?? "br");
   const [languages, setLanguages] = useState();
   const [loading, setLoading] = useState(true);
-  const defaultBackgroundColor = "#ffffff"; // Sua cor padrão
-  const alternateBackgroundColor = "#2C2C2C"; // Sua cor alternativa (ex: LightCyan)
+  const defaultBackgroundColor = "#ffffff"; 
+  const alternateBackgroundColor = "#2C2C2C"; 
 
-  // 1. Estado para a cor de fundo (inicializado com a cor padrão)
+  
   const [backgroundColor, setBackgroundColor] = useState(defaultBackgroundColor);
 
-  // 2. Função MODIFICADA para alternar a cor de fundo
+  
   const changeBackgroundColor = () => {
-    // Verifica qual é a cor ATUAL e define para a OUTRA cor
     setBackgroundColor((currentBackgroundColor) =>
       currentBackgroundColor === defaultBackgroundColor ? alternateBackgroundColor : defaultBackgroundColor
     );

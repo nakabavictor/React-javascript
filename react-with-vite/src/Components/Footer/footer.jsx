@@ -22,7 +22,7 @@ function Footer() {
 
   const handleImageClick = () => {
     if (typeof changeBackgroundColor === "function") {
-      changeBackgroundColor(newBackgroundColor); // Chama a função do contexto!
+      changeBackgroundColor(newBackgroundColor);
     } else {
       console.error("changeBackgroundColor não encontrada no contexto!");
     }

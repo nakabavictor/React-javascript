@@ -9,6 +9,17 @@ export const AppProvider = ({ children }) => {
   const [language, setLanguage] = useState(savedLanguge ?? "br");
   const [languages, setLanguages] = useState();
   const [loading, setLoading] = useState(true);
+  const defaultBackgroundColor = "#ffffff";
+  const alternateBackgroundColor = "#2C2C2C";
+
+  const [backgroundColor, setBackgroundColor] = useState(defaultBackgroundColor);
+
+  const changeBackgroundColor = () => {
+    setBackgroundColor((currentBackgroundColor) =>
+      currentBackgroundColor === defaultBackgroundColor ? alternateBackgroundColor : defaultBackgroundColor
+    );
+    console.log("Cor de fundo alternada!");
+  };
 
   useEffect(() => {
     const fetchlanguges = async () => {
@@ -28,5 +39,9 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem("lang", language);
   }, [language]);
 
-  return <AppContext.Provider value={{ language, languages, setLanguage, loading }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ language, languages, setLanguage, loading, backgroundColor, changeBackgroundColor }}>
+      {children}
+    </AppContext.Provider>
+  );
 };

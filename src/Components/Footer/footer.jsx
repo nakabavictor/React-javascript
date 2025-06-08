@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Linkedinicon from "../../assets/linkedinicon.svg";
 import Instagramicon from "../../assets/intsgramicon.svg";
@@ -6,13 +6,32 @@ import FacebookIcon from "../../assets/facebookicon.svg";
 import Xicon from "../../assets/X_icon.svg.png";
 import Brasil from "../../assets/brazil_9906449 2.svg";
 import USA from "../../assets/usa_4628635 2.svg";
+import Lua from "../../assets/2023236.svg";
+import Sol from "../../assets/1075154.svg";
 import "./Footer.css";
 import { AppContext } from "../../Context/AppContext";
+
 function Footer() {
+  const newBackgroundColor = "#484D50";
   const appContext = useContext(AppContext);
+  const { changeBackgroundColor } = useContext(AppContext);
+  const [isDark, setIsDark] = useState(false);
 
   const mudarlinguagem = (pais) => {
     appContext.setLanguage(pais);
+  };
+
+  const handleImageClick = () => {
+    if (typeof changeBackgroundColor === "function") {
+      changeBackgroundColor(newBackgroundColor);
+    } else {
+      console.error("changeBackgroundColor não encontrada no contexto!");
+    }
+  };
+
+  const duasFuncoes = () => {
+    handleImageClick();
+    setIsDark(!isDark);
   };
 
   return (
@@ -64,8 +83,9 @@ function Footer() {
         </div>
         <div className="baixo d-flex">
           <div className="imgs">
-            <img src={Brasil} alt="" onClick={() => mudarlinguagem("br")} style={{ width: "25px" }} />
-            <img src={USA} alt="" onClick={() => mudarlinguagem("en")} style={{ width: "25px" }} />
+            <img src={isDark ? Sol : Lua} alt="" onClick={duasFuncoes} style={{ width: "25px", height: "30px" }} />
+            <img src={Brasil} alt="" onClick={() => mudarlinguagem("br")} style={{ width: "25px", height: "30px" }} />
+            <img src={USA} alt="" onClick={() => mudarlinguagem("en")} style={{ width: "25px", height: "30px" }} />
           </div>
         </div>
       </footer>

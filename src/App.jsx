@@ -16,13 +16,15 @@ function App() {
 
   return (
     <Router>
-      <ScrollTop />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/projects" element={<Project />}></Route>
-      </Routes>
+      <div className="App" style={{ backgroundColor: appContext.backgroundColor }}>
+        <ScrollTop />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/projects" element={<Project />}></Route>
+        </Routes>
+      </div>
     </Router>
   );
 }
